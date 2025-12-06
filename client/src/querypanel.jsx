@@ -22,7 +22,7 @@ export default function QueryPanel({schema,useSchema})
 		try{
 			const payload = useSchema && schema ? schema : null
 
-			const res = await fetch("http://localhost:4000/api/query",{
+			const res = await fetch("https://schema-iq-lnos.vercel.app/",{
 				method:"POST",
 				headers:{"Content-Type":"application/json"},
 				body:JSON.stringify({prompt,schema:payload})
