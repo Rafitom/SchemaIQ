@@ -14,7 +14,7 @@ export default function PromptPanel({onResult})
 		setError(null)
 
 		try {
-			const res = await fetch("https://schema-iq-lnos.vercel.app/",{
+			const res = await fetch("https://schema-iq-lnos.vercel.app/api/generate-schema",{
 				method:"POST",
 				headers:{"Content-Type":"application/json"},
 				body:JSON.stringify({prompt})
